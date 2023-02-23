@@ -5,7 +5,7 @@ $(document).ready(function(){
       var hash = this.hash;
       $('body,html').animate({
       scrollTop: $(hash).offset().top
-      }, 1200, function(){
+      }, 200, function(){
       window.location.hash = hash;
      });
      } 
