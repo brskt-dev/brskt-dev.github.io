@@ -278,6 +278,7 @@ html {
 
 .card:hover .icon i {
    background: linear-gradient(90deg, #FF7E7E, #FF4848);
+   background-clip: text;
    -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
    opacity: 1;
