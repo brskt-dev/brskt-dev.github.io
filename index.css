@@ -178,7 +178,7 @@ html {
 }
 
 .content {
-	max-width: 1024px;
+	max-width: 1280px;
 	width: 100%;
 	padding: 0 4%;
 	padding-top: 20px;
@@ -227,10 +227,7 @@ html {
 	font-size: 40px;
  }
 
- .material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+
 
 .card .title {
    width: 100%;
@@ -246,35 +243,23 @@ html {
 .card .text {
    width: 70%;
    margin: 0 auto;
+   height: 200px;
    font-size: 13px;
    text-align: center;
    margin-top: 20px;
    color: white;
    font-weight: 200;
    letter-spacing: 2px;
-   opacity: 0;
-   max-height:0;
-   transition: all 0.3s ease;
-}
-
-.card:hover {
-   height: 270px;
-}
-
-.card:hover .info {
-   height: 90%;
-}
-
-.card:hover .text {
-   transition: all 0.3s ease;
    opacity: 1;
-   max-height:40px;
+   max-height: 100px;
+   transition: all 0.3s ease;
 }
 
 .card:hover .icon {
-   background-position: -120px;
-   transition: all 0.3s ease;
-}
+	background-position: -120px;
+	transition: all 0.3s ease;
+ }
+ 
 
 .card:hover .icon i {
    background: linear-gradient(90deg, #FF7E7E, #FF4848);
