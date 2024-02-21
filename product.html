@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativvus - Soluções</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet preconnect" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet preconnect" href="assets/css/animate.css" />
+    <link rel="stylesheet preconnect" href="assets/css/product.css" />
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div id="loader">
+            <div class="coruja-spinner"></div>
+            <div class="sombra-coruja"></div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- ====== Header ====== -->
+    <main-header></main-header>
+
+    <!-- ====== Particles ====== -->
+    <div class="container-particles">
+        <div id="particles-js"></div>
+    </div>
+
+    <!-- ====== Sensor 3D ====== -->
+    <canvas class="webgl"></canvas>
+
+    <div class="orbit">
+        <span id="orbit01"></span>
+        <span id="orbit02"></span>
+        <span id="orbit03"></span>
+    </div>
+
+    <div class="element-circle">
+        <img class="el-circle-sensor" src="assets/img/elements/element_circle.png" alt="">
+        <img class="el-circle-cracha" src="assets/img/elements/element_circle.png" alt="">
+    </div>
+    <div class="element-light light-point-1"></div>
+    <div class="element-light light-point-2"></div>
+
+    <!-- ====== Start Main ====== -->
+    <div id="main" class="swipe-section">
+
+        <!-- ====== start axia flow ====== -->
+        <section id="home" class="panel scroll-area-0">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 section-content content-text-2">
+                        <div class="margin-top-mobile">
+                            <h1 class="title-hero-2 wow fadeInDown" data-wow-delay=".6s">AXIA FLOW</h1>
+                            <h3 class="wow fadeInLeft" data-wow-delay=".8s">tecnologia aliada a qualidade de ambientes
+                            </h3>
+                        </div>
+                        <div class="text-center position-relative">
+                            <img class="el-light-point-mobile" src="assets/img/elements/light-point-02.png" alt="">
+                            <img class="img-mobile" style="width: 95% !important;"
+                                src="assets/img/background/sensor_front.png" alt="">
+
+                            <div class="wow fadeInDown next-button" data-wow-delay="3.5s">
+                                <a href="#first-section">
+                                    <img src="./assets/img/elements/dotted-arrow.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wow fadeInDown next-button-mobile" data-wow-delay="3.5s">
+                <a href="#first-section">
+                    <img src="./assets/img/elements/dotted-arrow.svg" alt="">
+                </a>
+            </div>
+
+        </section>
+
+        <section id="first-section" class="panel scroll-area-1">
+
+            <div class="container">
+                <div class="row">
+                    <div id="colEmpty" class="col"></div>
+                    <div class="col section-content text-start">
+                        <div class="text-center position-relative">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-mobile img-sensor-01" src="assets/img/background/sensor_left.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-indent-left">Transformando <span>{INTERATIVIDADE}</span> <br> em
+                                insights essenciais</h1>
+                            <div class="description-left">
+                                <p id="textAnimation01" class="wow fadeInLeft" data-wow-delay=".2s">
+                                    O <span>Axia Flow</span> é o único dispositivo capaz de apontar métricas como fluxo
+                                    de pessoas e índice de satisfação em um ambiente.
+                                    Com tecnologia avançada projetada para simplificar a captura de informações, ele é
+                                    o ponto de partida de nosso ecossistema de dados.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel scroll-area-2">
+
+            <div class="container">
+                <div class="row">
+                    <div id="colEmpty" class="col"></div>
+                    <div class="col section-content text-start">
+                        <div class="text-center position-relative w-100">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-mobile img-sensor-02" src="assets/img/background/sensor_right.png" alt="">
+                        </div>
+                        <div class="w-100">
+                            <h1 class="text-topic-mobile">Características do <span>{Axia Flow}</span>:</h1>
+                            <div class="description-left">
+                                <ul id="textAnimation02" class="table-description content-light mt-3 wow fadeInLeft"
+                                    data-wow-delay=".2s">
+                                    <li>
+                                        <h4><i class="fa-solid fa-plug-circle-check"></i>  instalação intuitiva</h4>
+                                    </li>
+                                    <li>
+                                        <h4><i class="fa-solid fa-globe"></i> conectividade independente</h4>
+                                    </li>
+                                    <li>
+                                        <h4><i class="fa-solid fa-face-smile"></i> pesquisa de satisfação integrada
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4><i class="fa-solid fa-chalkboard-user"></i> fluxo de usuários e colaboradores em tempo
+                                            real
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel scroll-area-3">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col section-content content-text-3">
+                        <h1 id="textAnimation03" class="wow fadeInDown" data-wow-delay=".2s" style="max-width: 85%;"> 
+                            A quantidade surreal de dados gerados, aliada a inteligência Axia
+                            levará sua operação a um <span>{novo nível}</span> do mercado de facilities.
+                        </h1>
+                        <div class="text-center position-relative">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-mobile img-sensor-03" style="width: 90%;"
+                                src="assets/img/background/sensor_bottom.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ====== end axia flow ====== -->
+
+        <!-- ====== start axia badge ====== -->
+        <section class="panel scroll-area-4" id="badge-section">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 section-content content-text-2">
+                        <div>
+                            <h1 class="title-hero-2 wow fadeInDown" data-wow-delay=".1s">AXIA BADGE</h1>
+                            <h3 class="wow fadeInTop" data-wow-delay=".2s">inovação direcionada a rotina operacional
+                            </h3>
+                        </div>
+                        <div class="text-center position-relative">
+                            <img class="el-light-point-mobile" src="assets/img/elements/light-point-02.png" alt="">
+                            <img class="img-cracha-mobile" style="width: 70% !important;"
+                                src="assets/img/background/cracha_front.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel scroll-area-5">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col section-content text-end">
+                        <div class="text-center position-relative">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-cracha-mobile img-cracha-05" src="assets/img/background/cracha_right.png"
+                                alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-indent-right">Rotinas mais inteligentes e eficientes geram
+                                <span>{excelência em limpeza}</span>
+                            </h1>
+                            <div class="description-right">
+                                <p id="textAnimation05" class="wow fadeInRight" data-wow-delay=".2s">O <span>Axia
+                                        Badge</span> é a chave
+                                    para
+                                    transformar dados em ações concretas. Sua tecnologia é capaz de gerar dados
+                                    sobre a rotina da operação, métricas de saúde ocupacional, além de permitir
+                                    o acompanhamento de tarefas pendentes através de sua interface.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colEmpty" class="col"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel scroll-area-6">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col section-content text-end">
+                        <div class="text-center position-relative w-100">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-cracha-mobile img-cracha-06" src="assets/img/background/cracha_back.png"
+                                alt="">
+                        </div>
+                        <div class="w-100">
+                            <h1 class="text-topic-mobile">Características do <span>{Axia Badge}</span>:</h1>
+                            <div class="description-right">
+                                <ul id="textAnimation06"
+                                    class="table-description text-end content-light mt-3 wow fadeInRight"
+                                    data-wow-delay=".2s">
+                                    <li>
+                                        <h4>até 30 horas de operação ininterrupta <i class="fa-solid fa-bolt"></i>
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>conexão baseada em comando <i class="fa-solid fa-wifi"></i></h4>
+                                    </li>
+                                    <li>
+                                        <h4>interface OLED de 0.96" <i class="fa-solid fa-tablet-button"></i></h4>
+                                    </li>
+                                    <li>
+                                        <h4>design compacto e funcional <i class="fa-solid fa-pen-ruler"></i></h4>
+                                    </li>
+                                    <li>
+                                        <h4>integração automática com Axia Flow
+                                            <i class="fa-solid fa-network-wired"></i>
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colEmpty" class="col"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel scroll-area-7">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col section-content text-end">
+                        <div class="text-center position-relative">
+                            <img class="el-circle-mobile" src="assets/img/elements/element_circle.png" alt="">
+                            <img class="img-mobile img-cracha-07" style="width: 90%;"
+                                src="assets/img/background/sensor_cracha.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-indent-right">Integração  <span>{Inteligente}</span>
+                            </h1>
+                            <div class="description-right">
+                                <p id="textAnimation07" class="wow fadeInRight" data-wow-delay=".2s">
+                                    A sinergia entre o <span>Axia Badge</span> e
+                                    <span>Axia Flow</span> garante que a geração de dados seja a mais completa possível. Essa
+                                    integração
+                                    estratégica
+                                    não
+                                    apenas otimiza a eficiência operacional, mas também oferece insights preciosos para
+                                    aprimorar rotas, alocar recursos de forma eficaz e, por conseguinte, elevar
+                                    significativamente todos os padrões na gestão de facilities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colEmpty" class="col"></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ====== end axia badge ====== -->
+
+        <!-- ====== start webapp ====== -->
+        <section class="panel scroll-area-8" id="webapp-section">
+
+            <div id="container-img" class="container">
+                <div class="row">
+                    <div class="col section-webapp">
+
+                        <div>
+                            <h1 class="title-hero-2">AXIA WEB APP</h1>
+                            <p id="text-webapp">
+                                Nosso sistema analisa os dados capturados pelos devices e oferece <span>monitoramento em
+                                    tempo real</span>  dos ambientes, proporciona uma visão clara do <span>desempenho real</span>  de cada espaço.
+                                Além disso, <span>calcula uma infinidade de métricas</span> capazes de antecipar
+                                necessidades da operação, promovendo uma gestão eficiente e proativa.
+                            </p>
+                        </div>
+
+                        <div class="cards-webapp">
+                            <div class="card-img card-1">
+                                <img class=" img-webapp" src="assets/img/background/bg_webapp.png" alt="">
+                            </div>
+                            <!-- <div class="card-img card-2">
+                                <img class="img-webapp" src="assets/img/background/bg_monitoramento.png" alt="">
+                            </div>
+                            <div class="card-img card-3">
+                                <img class="img-webapp" src="assets/img/background/bg_planejadoXrealizado.png" alt="">
+                            </div>
+                            <div class="card-img card-4">
+                                <img class="img-webapp" src="assets/img/background/bg_desgaste.png" alt="">
+                            </div>
+                            <div class="card-img card-5">
+                                <img class="img-webapp" src="assets/img/background/bg_consumo.png" alt="">
+                            </div> -->
+                        </div>
+
+                        <div id="description-webapp" class="description-left">
+                            <p id="textAnimation08" class="wow fadeInRight" data-wow-delay=".2s">
+                                Nosso sistema analisa os dados capturados pelos devices e oferece monitoramento em
+                                tempo real dos ambientes, proporciona uma visão clara do desempenho real de cada espaço.
+                                Além disso, calcula uma infinidade de métricas capazes de antecipar
+                                necessidades da operação,promovendo uma gestão eficiente e proativa.
+                            </p>
+                        </div>
+                        <div class="position-relative cards-webapp-mobile">
+                            <img class="el-light-point-mobile" src="assets/img/elements/light-point-02.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- ====== end webapp ====== -->
+
+        <!-- ====== Start Footer ====== -->
+        <section class="panel footer-mobile">
+            <main-footer></main-footer>
+        </section>
+        <!-- ====== End Footer ====== -->
+
+
+    </div>
+    <!-- ====== End Main Section ====== -->
+
+    <!-- ====== Start Footer ====== -->
+    <main-footer class="footer-web"></main-footer>
+    <!-- ====== End Footer ====== -->
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+
+    <!-- ====== All Javascript Files ====== -->
+    <script async src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
+    <script async src="assets/js/bootstrap.bundle.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script async src="https://kit.fontawesome.com/d31a552091.js" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/product.js"></script>
+
+</body>
+
+</html>

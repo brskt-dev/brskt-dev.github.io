@@ -1,0 +1,165 @@
+$orbitItemSize: 25px;
+$map: (ring-0: 4, ring-1: 3, ring-2: 8, ring-3: 3);
+$lastRing: 3;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+.orbit {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50px;
+}
+
+.orbit-icon {
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  font-size: 15px;
+  border-radius: 50%;
+  background: #111;
+  color: #eee;
+  text-align: center;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-wrap {
+  height: 100%;
+  list-style: none;
+  font-size: 1.3em;
+  padding-left: 0px;
+  
+>li {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}
+
+ul[class^=ring] {
+  @extend %ring;
+  transition: all 300ms ease-in-out;
+  li {
+    @extend %orbiting-object;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+@mixin orbit-item($numItems, $numRing) {
+  @for $s from 1 through $numItems {  
+    // Spread items over the ring
+    $deg: 380deg / $numItems;
+    
+    .ring-#{$numRing} > *:nth-of-type(#{$s}) {
+      transform: rotate($s * $deg) translate(12.5em - ($numRing * 2.5)) rotate(-$s * $deg);
+    }
+  }
+}
+
+// Render rings
+@for $i from 0 through $lastRing {  
+  .ring-#{$i} {
+    // decrease each ring in size
+    width: 25em - ($i * 5);
+    height: 25em - ($i * 5);
+    animation: clockwiseRotate 35s - ($i * 5) linear infinite;
+    
+    i {
+      animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
+    }
+  }
+  
+  @include orbit-item(map-get($map, ring-#{$i}), $i);
+}
+
+
+%ring {
+  border: solid 1px rgba(37, 168, 165, 0.7);
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+%orbiting-object {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  margin: -$orbitItemSize / 2;
+}
+
+/*
+  center;
+*/
+.orbit-center {
+  z-index: 5;
+  font-size: 2em;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  background: hotpink;
+  border-radius: 50%;
+  
+}
+
+/* 
+animations 
+*/
+@keyframes clockwiseRotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes counterClockwiseRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+/* 
+icons 
+*/
+$icons : (
+  ('school-circle-check', #b71c1c, white),
+  ('money-bill-transfer', #4CAF50, #CDDC39),
+  ('people-group', white, darkslateblue),
+  ('routen', #1565c0, #ff8f00),
+  ('coins', #fbc02d, #ef6c00),
+  ('scale-balanced', #03a9f4, white),
+  ('money-bill-trend-up', snow, limegreen),
+  ('business-time', #444, white),
+  ('stopwatch', white, #222),
+  ('user-plus', white, #03a9f4),
+  ('handshake', #222, #fff),
+  ('comments-dollar', green, white),
+  ('chart-pie', red, white),
+  ('headset', red, white),
+  ('cloud', #333, white)
+);
+
+@each $icon in $icons {
+  .fa-#{nth($icon, 1)} {
+    background: nth($icon, 2);
+    color: nth($icon, 3);
+  }
+}
+

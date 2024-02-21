@@ -1,0 +1,51 @@
+@import "styles.css";
+
+.terms-section {
+    width: 100%;
+    height: fit-content;
+}
+
+.align-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.text-align h1 {
+    color: var(--green);
+}
+
+.text-align h2 {
+    font-size: 28px;
+}
+
+.text-align p {
+    color: #eeeeeed5;
+    text-align: justify;
+    padding: 5px 25px;
+}
+
+/* Responsive Style */
+@media (max-width: 1024px) {
+    .align-content {
+        width: 70%;
+        margin-top: 15%;
+    }
+}
+  
+@media (max-width: 767px) {
+    .align-content {
+        width: 95%;
+        margin-top: 20%;
+    }
+
+}

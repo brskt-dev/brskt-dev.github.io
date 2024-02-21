@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ativvus - Contato</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div id="loader">
+            <div class="coruja-spinner"></div>
+            <div class="sombra-coruja"></div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+    <!-- ====== Header ====== -->
+    <main-header></main-header>
+
+    
+
+    <section class="contact-section">
+
+        <div class="video-overlay wow fadeInLeft" data-wow-duration="3s" data-wow-delay="1s"></div>
+        <video class="bg-video" autoplay loop muted src="./assets/video/hero-contact.mp4" type="video/mp4"></video>
+        
+        <div class="container align-content">
+
+            <div class="cta-container wow">
+                <h1 class="wow fadeInLeft" data-wow-delay=".6s">ENTRE EM NOSSA <br> <span>LISTA DE ESPERA</span></h1>
+                <h2 class="wow fadeInLeft" data-wow-delay=".7s">você já está a um passo a frente,</h2>
+                <h2 class="wow fadeInLeft" data-wow-delay=".8s">dê o próximo rumo ao futuro<span>_</span></h2>
+
+            </div>
+
+            <div class="container-divider wow fadeIn" data-wow-delay=".7s"></div>
+
+            <div class="form-container">
+                <form class="row g-3 needs-validation" novalidate>
+
+                    <!-- Linha 1 -->
+                    <div class="col-12 input-group wow fadeInRight" data-wow-delay=".6s">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-tie"></i></span>
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome"
+                            aria-describedby="basic-addon1" maxlength="100" name="name" required>
+                    </div>
+    
+                    <!-- Linha 2 -->
+                    <div class="col-md-6 input-group input-group-half wow fadeInRight" data-wow-delay=".7s">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail"
+                            aria-describedby="basic-addon2" name="email" required>
+                    </div>
+                    <div class="col-md-6 input-group input-group-half wow fadeInRight" data-wow-delay=".7s">
+                        <span class="input-group-text" id="basic-addon3"><i class="fa-solid fa-phone"></i></span>
+                        <input type="tel" class="form-control" pattern="^(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$" placeholder="Telefone (com DDD)" aria-label="Telefone"
+                            aria-describedby="basic-addon3" id="phone-input" maxlength="11" name="phone" required>
+                    </div>
+                    
+                    <!-- Linha 3 -->
+                    <div class="col-12 input-group wow fadeInRight" data-wow-delay=".8s">
+                        <span class="input-group-text" id="basic-addon4"><i class="fa-solid fa-landmark"></i></span>
+                        <input type="text" class="form-control" placeholder="Empresa" aria-label="Empresa"
+                            aria-describedby="basic-addon4" name="company" required>
+                    </div>
+    
+                    <div class="col-md-5 col-5 wow fadeInRight" data-wow-delay=".9s">
+                        <input type="radio" class="btn-check" name="time0" id="option1" autocomplete="off">
+                        <label tabindex="0" class="btn btn-secondary morning-label" for="option1"><i class="fa-solid fa-mug-saucer"></i> Ligue-me de manhã</label>
+                    </div>
+
+                    <div class="col-md-2 col-2 period-text wow fadeInRight" data-wow-delay=".9s">
+                        <span>ou</span>
+                    </div>
+    
+                    <div class="col-md-5 col-5 wow fadeInRight" data-wow-delay=".9s">
+                        <input type="radio" class="btn-check" name="time1" id="option2" autocomplete="off">
+                        <label  tabindex="0" class="btn btn-secondary afternon-label" for="option2"><i class="fa-solid fa-cloud-sun"></i> Ligue-me de tarde</label>
+                    </div>
+    
+                    <div class="col-12">
+                        <div class="alert alert-danger wow fadeIn" role="alert">
+                            <div class="alert-title">
+                                <i class="fa-solid fa-triangle-exclamation"></i> <span>Quase lá...</span> 
+                            </div>
+                            
+                            Há campos preenchidos incorretamente!
+                        </div>
+                    </div>
+
+                    <!-- Send Button -->
+                    <div class="col-12 wow fadeInRight" data-wow-delay="1s">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+
+                    <div class="col-12 wow fadeIn" data-wow-delay="1s">
+                        <h3 class="copy-slogan">Leia nossos  <a href="policy.html">Termos e Condições</a></h3>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-sended-container wow fadeIn" data-wow-delay=".5s">
+                <img src="assets/img/icons/goal-icon.svg" alt="">
+                <h1>Parabéns!</h1>
+                <h3>sua inscrição foi confirmada,<br> em breve entraremos em contato<span>_</span></h3>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- ====== Footer ====== -->
+    <main-footer></main-footer>
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="fa-solid fa-angles-up"></i>
+    </a>
+
+    <!-- ====== All Javascript Files ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="https://kit.fontawesome.com/d31a552091.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leader-line@1.0.7/leader-line.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+
+</body>
+
+</html>

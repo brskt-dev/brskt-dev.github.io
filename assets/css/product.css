@@ -1,0 +1,820 @@
+@import "styles.css";
+
+body {
+    /* overscroll-behavior: none !important; */
+    height: 100vh;
+    background-color: #08131C !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* section {
+    background: rgba(8, 19, 28, 0);
+} */
+
+h1 {
+    font-size: 47px;
+    color: var(--green);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+h1 span {
+    color: #eeeeee;
+}
+
+h2 {
+    color: var(--blue);
+}
+
+h4 {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16pt;
+    color: #eeeeeeaf;
+}
+
+h4 i {
+    color: var(--pink);
+}
+
+p {
+    color: #eeeeeeaf;
+}
+
+p span {
+    color: var(--pink);
+}
+
+.text-indent-left {
+    text-indent: -20px;
+    padding-left: 20px;
+}
+
+.text-indent-right {
+    text-indent: -20px;
+    padding-right: 20px;
+    direction: rtl;
+}
+
+.description-left {
+    padding-left: 10px;
+    border-left: 1px solid var(--green);
+}
+
+.description-right {
+    padding-right: 10px;
+    border-right: 1px solid var(--green);
+}
+
+.element-light {
+    width: 1100px;
+    height: 1100px;
+    position: fixed;
+    opacity: 0.2;
+    background-image: url("../img/elements/light-point-01.png");
+    background-size: 100%;
+    z-index: 1;
+    animation: pulse 3s infinite alternate;
+}
+
+/* Animations */
+@keyframes pulse {
+    from {
+        transform: scale(0.8);
+        /* Escala inicial (normal) */
+        opacity: 0.35;
+    }
+
+    to {
+        transform: scale(1);
+        /* Escala final (aumentada) */
+        opacity: 0.5;
+    }
+}
+
+.light-point-1 {
+    top: -50%;
+    left: -50%;
+}
+
+.light-point-2 {
+    bottom: -50%;
+    right: -50%;
+}
+
+.el-circle-mobile {
+    display: none;
+}
+
+.el-light-point-mobile {
+    display: none;
+}
+
+.element-circle {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.el-circle-sensor {
+    position: absolute;
+    height: 70%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-96%, -50%);
+    opacity: 0;
+}
+
+.el-circle-cracha {
+    position: absolute;
+    height: 70%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    opacity: 0;
+}
+
+.orbit {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    scale: 0;
+}
+
+.orbit span:nth-child(1) {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #28a8a5;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.orbit span:nth-child(2) {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #28a8a5;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.orbit span:nth-child(3) {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #28a8a5;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.webgl {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    outline: none;
+
+    overflow: hidden;
+}
+
+/*======================================
+    Start Global area CSS
+========================================*/
+
+.swipe-section {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    z-index: 1;
+}
+
+.swipe-section .panel {
+    position: relative;
+    height: 100vh;
+}
+
+.section-content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    opacity: 1;
+}
+
+.section-webapp {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center !important;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    padding-bottom: 10%;
+}
+
+.section-webapp p {
+    margin-top: 5px;
+    font-size: 16pt;
+    color: #eeeeeeaf;
+}
+
+.section-content p {
+    margin-top: 5px;
+    font-size: 16pt;
+    color: #eeeeeeaf;
+}
+
+.content-text-1 {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.content-text-2 {
+    display: flex;
+    align-content: center;
+    justify-content: center !important;
+}
+
+.img-mobile {
+    width: 80%;
+    display: none !important;
+}
+
+.img-cracha-mobile {
+    width: 45%;
+    display: none !important;
+}
+
+.text-content {
+    width: fit-content;
+    padding: 20px 25px;
+    position: absolute;
+    background-color: #613161;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.text-content h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.container-particles {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.table-description {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.table-description li {
+    position: relative;
+    padding: 9px;
+    border-bottom: 2px solid #28a8a656 !important;
+}
+
+.table-description li::before {
+    content: '';
+    position: absolute;
+    padding: 0;
+    height: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    /* background-color: #ff5100b2; */
+    background-image: linear-gradient(0deg, rgba(40, 168, 166, 0.2), rgba(0, 85, 244, 0.2));
+    z-index: -1;
+    -webkit-animation: out 0.2s;
+}
+
+.table-description li:hover:before {
+    content: '';
+    height: 100%;
+    -webkit-animation: in 0.5s;
+}
+
+@-webkit-keyframes in {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes out {
+    0% {
+        height: 100%;
+        top: 0;
+    }
+
+    100% {
+        height: 0;
+        top: 0;
+    }
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.footer-web {
+    display: unset;
+}
+
+/*======================================
+    End Global area CSS
+========================================*/
+
+/*======================================
+    Start Hero area CSS
+========================================*/
+
+.title-hero {
+    font-size: 70px;
+    margin-top: 0;
+    color: var(--green);
+}
+
+.title-hero-2 {
+    font-size: 70px;
+    margin-top: 0;
+    color: var(--green);
+}
+
+.hero {
+    /* background: var(--primary-color); */
+    height: 100vh;
+    position: relative;
+    /* padding-top: 130px; */
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/background/bg_product.png");
+    z-index: 10;
+}
+
+.hero-content {
+    max-width: 780px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.hero-content h1 {
+    /* position: absolute; */
+    font-size: 40pt;
+    line-height: 60px;
+}
+
+.img-hero {
+    position: absolute;
+    width: 95%;
+    bottom: 6%;
+}
+
+.next-button {
+    left: -10px;
+    top: 10px;
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+}
+
+.next-button img {
+    width: 35px;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.next-button-mobile {
+    display: none;
+}
+
+/*======================================
+    End Hero area CSS
+========================================*/
+
+/*======================================
+    Start WebApp area CSS
+========================================*/
+
+.cards-webapp {
+    height: 40%;
+    width: 100%;
+    /* margin: auto; */
+    margin-bottom: 10%;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-img {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-bottom: 50px;
+}
+
+.card-1 {
+    top: 25px;
+}
+
+.card-2 {
+    top: 0px;
+}
+
+.card-3 {
+    top: 25px;
+}
+
+.card-4 {
+    top: 50px;
+}
+
+.card-5 {
+    top: 75px;
+}
+
+.img-webapp {
+    height: 65vh;
+}
+
+.scroll-area-8 {
+    background: #08131Cff;
+    background: -webkit-linear-gradient(to top, #08131Cff 60%, rgba(8, 19, 28, 0));
+    background: linear-gradient(to top, #08131Cff 60%, rgba(8, 19, 28, 0));
+}
+
+.cards-webapp-mobile {
+    display: none;
+}
+
+#description-webapp {
+    display: none;
+}
+
+/*======================================
+    end WebApp area CSS
+========================================*/
+
+/* Responsive Style */
+@media only screen and (min-width: 1900px) {
+
+    .light-point-1 {
+        left: -20%;
+    }
+
+    .light-point-2 {
+        right: -20%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    #colEmpty {
+        display: none !important;
+    }
+
+    .element-light {
+        width: 600px;
+        height: 600px;
+    }
+
+    .light-point-1 {
+        top: -30%;
+        left: -70%;
+    }
+
+    .light-point-2 {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+
+    /*======================================
+        Start Global Responsive area CSS
+    ========================================*/
+    .wow {
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+
+    .margin-top-mobile {
+        margin-top: 100px;
+    }
+
+    .header-socials {
+        display: none !important;
+    }
+
+    .el-circle-mobile {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    .el-light-point-mobile {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: -150px;
+        left: 0;
+        z-index: -1;
+        animation: pulse 3s infinite alternate;
+    }
+
+    .next-button {
+        display: none;
+    }
+
+    .next-button-mobile {
+        display: block;
+        position: absolute;
+        height: fit-content;
+        left: calc(50% - 17.5px);
+        bottom: 60px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .next-button-mobile img {
+        width: 35px;
+        -webkit-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+    }
+
+    .header {
+        width: 100%;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .footer-mobile {
+        display: block;
+        position: relative;
+        height: 40vh !important;
+        bottom: 0;
+    }
+
+    .footer-web {
+        display: none;
+    }
+
+    .scroll-top {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 14pt;
+        margin-bottom: 5%;
+    }
+
+    h4 {
+        font-size: 12pt;
+    }
+
+    #main {
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+    }
+
+    section {
+        height: 100vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        padding-top: 25px;
+    }
+
+    .scroll-area-0,
+    .scroll-area-4,
+    .scroll-area-8 {
+        background-size: 500%;
+        background-position: center bottom -200px;
+        background-repeat: no-repeat;
+        background-image: url("../img/elements/dark-wave-01.svg");
+    }
+
+    .content-text-1 {
+        justify-content: center;
+    }
+
+    .section-content {
+        position: relative;
+        padding: 25px;
+        justify-content: space-evenly;
+    }
+
+    .section-content h1 {
+        font-size: 32px;
+    }
+
+    .section-content p {
+        font-size: 14pt;
+    }
+
+    .img-mobile {
+        display: unset !important;
+    }
+
+    .img-cracha-mobile {
+        display: unset !important;
+    }
+
+    .text-topic-mobile {
+        text-align: center;
+    }
+
+    .content-text-3 {
+        text-align: justify;
+    }
+
+    .text-indent-left {
+        text-indent: none;
+        padding-left: none;
+        text-align: center;
+    }
+
+    .description-left {
+        text-align: justify;
+        padding: 0;
+        border-left: 0px solid var(--green);
+        border-top: 1px solid var(--green);
+    }
+
+    .text-indent-right {
+        text-indent: none;
+        padding-right: none;
+        direction: none;
+        text-align: center;
+    }
+
+    .description-right {
+        text-align: justify;
+        padding: 0;
+        border-right: 0px solid var(--green);
+        border-top: 1px solid var(--green);
+    }
+
+    /*======================================
+        End Global Responsive area CSS
+    ========================================*/
+
+    /*======================================
+        Start Hero Responsive area CSS
+    ========================================*/
+
+    .title-hero {
+        font-size: 70px !important;
+        margin-top: 0;
+        color: var(--green);
+    }
+
+    .title-hero-2 {
+        font-size: 70px !important;
+        color: var(--green);
+    }
+
+    /*======================================
+        End Hero Responsive area CSS
+    ========================================*/
+
+
+    /*======================================
+        Start WebApp Responsive area CSS
+    ========================================*/
+    .cards-webapp {
+        display: none !important;
+    }
+
+    .cards-webapp-mobile {
+        display: block;
+        width: 100%;
+        height: 33vh;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url("../img/background/bg_webapp_pages.png");
+    }
+
+    .section-webapp {
+        justify-content: center !important;
+        padding: 25px;
+        padding-bottom: 10%;
+    }
+
+    .cards-webapp {
+        display: none !important;
+    }
+
+    .card-img {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        margin-bottom: 50px;
+    }
+
+    .card-1 {
+        top: 25px;
+        opacity: 1;
+    }
+
+    .card-2 {
+        display: none;
+    }
+
+    .card-3 {
+        display: none;
+    }
+
+    .card-4 {
+        display: none;
+    }
+
+    .card-5 {
+        display: none;
+    }
+
+    .img-webapp {
+        width: 100%;
+    }
+
+    #description-webapp {
+        display: block;
+    }
+
+    /*======================================
+        End WebApp Responsive area CSS
+    ========================================*/
+}
