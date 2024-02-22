@@ -244,6 +244,7 @@ p span {
     margin-top: 5px;
     font-size: 16pt;
     color: #eeeeeeaf;
+    text-align: justify;
 }
 
 .section-content p {
