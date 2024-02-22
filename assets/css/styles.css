@@ -35,12 +35,11 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track {
     border-radius: 8px;
-    background-color: rgba(3, 11, 17, 0.5);
+    background-color: rgba(3, 11, 17, 1);
 }
 
 html::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(40, 168, 166, 0.4);
+    background-color: rgba(40, 168, 166, 1);
 }
 
 html::-webkit-scrollbar-thumb:hover {
