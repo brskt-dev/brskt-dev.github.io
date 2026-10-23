@@ -1,11 +1,14 @@
 # brskt-dev.github.io
 
 Site raiz do GitHub Pages desta conta. Só redireciona para o portfólio, que fica em
-**https://brskt-dev.github.io/brskt-space/** (repositório [brskt-space](https://github.com/brskt-dev/brskt-space)).
+**https://brskt.dev/** (repositório [brskt-space](https://github.com/brskt-dev/brskt-space), com domínio próprio).
 
-- `index.html`: a raiz (`/`) vai para `/brskt-space/`, que escolhe PT ou EN pelo idioma do navegador.
-- `404.html`: qualquer outro caminho vai para o mesmo caminho dentro de `/brskt-space/`
-  (ex.: `/pt/sobre/` → `/brskt-space/pt/sobre/`). Se não existir lá, o 404 do portfólio responde.
+- `index.html`: a raiz (`/`) vai para `https://brskt.dev/`, que escolhe PT ou EN pelo idioma do navegador.
+- `404.html`: qualquer outro caminho vai para o mesmo caminho em `https://brskt.dev`
+  (ex.: `/pt/sobre/` → `https://brskt.dev/pt/sobre/`). Se não existir lá, o 404 do portfólio responde.
+- `/brskt-space/…` (os links antigos do portfólio) não passa por aqui: o próprio GitHub redireciona para
+  `https://brskt.dev/…`, porque o `brskt-space` tem domínio próprio.
 - `.nojekyll`: publica os arquivos como estão, sem Jekyll.
 
-Outros repositórios com Pages ativo (`/<repo>/`) continuam funcionando: o GitHub serve cada um pelo próprio repositório.
+Este repositório **não** tem domínio próprio, de propósito: assim os outros repositórios com Pages ativo
+(`brskt-dev.github.io/<repo>/`) continuam no mesmo endereço.

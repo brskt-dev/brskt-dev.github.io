@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bruno Anhezini · Brskt Space</title>
-    <!-- Any path outside /brskt-space/ (e.g. /pt/sobre/) moves under it, keeping the path,
-         query and hash. If the page does not exist there, the portfolio's own 404 answers. -->
+    <!-- Any other path on brskt-dev.github.io (e.g. /pt/sobre/) moves to the same path on https://brskt.dev,
+         keeping the query and hash. If the page does not exist there, the portfolio's own 404 answers.
+         /brskt-space/... never lands here: GitHub redirects it to brskt.dev itself (custom domain). -->
     <meta name="robots" content="noindex" />
     <meta name="color-scheme" content="dark" />
-    <meta http-equiv="refresh" content="2; url=/brskt-space/" />
+    <meta http-equiv="refresh" content="2; url=https://brskt.dev/" />
     <script>
-      location.replace('/brskt-space' + location.pathname + location.search + location.hash);
+      location.replace('https://brskt.dev' + location.pathname + location.search + location.hash);
     </script>
     <style>
       body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b0814; color: #ece8f6; font: 16px/1.5 system-ui, sans-serif; }
@@ -18,6 +19,6 @@
     </style>
   </head>
   <body>
-    <p><a href="/brskt-space/">Brskt Space · Bruno Anhezini</a></p>
+    <p><a href="https://brskt.dev/">Brskt Space · Bruno Anhezini</a></p>
   </body>
 </html>
